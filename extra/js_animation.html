@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .animate {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation-name: move;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-play-state: paused;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(500px);
+            }
+        }
+    </style>
+</head>
+<body>
+<button id="button" onclick="toggleAnimation()">Click me!</button>
+<br>
+<div class="animate" id="box"></div>
+</body>
+<script>
+    var animationPlaying = false;
+    var box = document.getElementById("box");
+    function toggleAnimation() {
+        console.log(box.style.animationPlayState);
+        animationPlaying = !animationPlaying;
+        if (animationPlaying) {
+            box.style.animationPlayState = "running"
+        } else {
+            box.style.animationPlayState = "paused"
+        }
+    }
+</script>
+</html>
