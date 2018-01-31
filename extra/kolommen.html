@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kolommen</title>
+    <style>
+        .vb1, .vb2, .vb3 {
+            border: 2px solid black;
+            text-align: center;
+            height: 200px;
+        }
+
+        .first {
+            border: 2px solid red;
+        }
+
+        .last {
+            border: 2px solid blue;
+        }
+
+        .first, .last {
+            height: 100%;
+        }
+
+        .vb1 .first {
+            overflow: auto;
+        }
+
+        .vb1 .last {
+            float: right;
+            width: 50%;
+        }
+
+        .vb2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .vb3 {
+            display: flex;
+        }
+
+        .vb3 .first {
+            flex: 1;
+        }
+
+        .vb3 .last {
+            flex: 2;
+        }
+    </style>
+</head>
+<body>
+<h1>Voorbeeld 1</h1>
+<div class="vb1">
+    <div class="last">2</div>
+    <div class="first">1</div>
+</div>
+<h1>Voorbeeld 2: css grid</h1>
+<div class="vb2">
+    <div class="first">1</div>
+    <div class="last">2</div>
+</div>
+<h1>Voorbeeld 3: flexbox</h1>
+<div class="vb3">
+    <div class="first">1</div>
+    <div class="last">2</div>
+</div>
+</body>
+</html>

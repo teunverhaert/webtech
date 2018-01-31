@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        
+        @keyframes wijzer{
+            
+           100%{
+               
+                transform: rotate(360deg);
+            }
+           
+        }
+        .abs{
+           width:200px;
+            height:200px;
+            background: url("klok.png");
+            background-size: contain;
+            position: relative;
+            left:300px;
+            top:100px; 
+            
+        }
+        
+        .abs div{
+            position: absolute;
+            left:0px;
+            top:0px;
+            width:5px;
+            height: 100px;
+            background: black;
+            transform-origin:50% 80%;
+             left:50%;
+            top:10%;
+        }
+    
+        .abs .seconde{            
+           
+            animation-name: wijzer;
+            animation-duration: 60s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            background: red;
+           
+        }
+        
+        .abs .minuut{
+           
+            animation-name: wijzer;
+            animation-duration: 3600s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            
+        }
+        
+          .abs .uur{
+           
+            animation-name: wijzer;
+            animation-duration: 43200s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    </style>
+</head>
+<body>
+   
+  
+   <div class="abs">
+      
+      <div class="seconde"></div>
+       <div class="minuut"></div>
+        <div class="uur"></div>
+       
+   </div>
+    
+</body>
+</html>

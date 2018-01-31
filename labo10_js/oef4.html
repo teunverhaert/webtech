@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validatie</title>
+</head>
+<body>
+<div>
+    <input type="number" id="jaar" value="2018">
+    <select id="niveau">
+        <option value="beginner">Beginner</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+    <input type="text" id="omschrijving">
+    <input type="text" id="code" value="2018-ABC-">
+    <button onclick="send()">Verzenden</button>
+</div>
+</body>
+<script>
+    function send() {
+        var jaar = parseInt(document.getElementById('jaar').value);
+        if (jaar < 2016 | jaar > 2018) {
+            window.alert('fout jaar')
+        }
+        var code = document.getElementById('code').value;
+        if (code.search('2018-ABC-') != 0 | code.length > 12) {
+            window.alert('foute code');
+        }
+        var omschrijving = document.getElementById('omschrijving').value;
+        if (!isNaN(parseInt(omschrijving.charAt(0))) | omschrijving.length == 0) {
+            window.alert('foute omschrijveing')
+        }
+    }
+</script>
+</html>

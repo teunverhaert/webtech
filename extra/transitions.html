@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transitions</title>
+    <style>
+        body {
+            max-width: 60%;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 100%;
+            height: 50px;
+            background: gray;
+        }
+
+        /*
+            Transition werkt ook met standaard css properies (boder, background, ...)
+         */
+
+        .scale {
+            width: 200px;
+            height: 100px;
+            background: blue;
+            /*Door een animatie toe te voegen aan de normale stand word deze afgespeeld
+            nadat de muis de hover verlaat
+             */
+            transform: scale(1) translateX(0px);
+            transition-property: all;
+            transition-duration: 2s;
+        }
+
+        .scale:hover {
+            transform: scale(2) translateX(50px);
+            transition-property: all;
+            transition-duration: 2s;
+        }
+
+        @keyframes rotate {
+            from {transform: rotate(0deg);}
+            to {transform: rotate(360deg);}
+        }
+
+        .rotatediv {
+            animation: rotate;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+
+        .rotatediv:hover {
+            animation-play-state: paused;
+        }
+
+        .multi {
+            width: 100px;
+            height: 100px;
+            background: mediumpurple;
+            animation: move, color;
+            animation-duration: 1s, 2s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes move {
+            from {transform: translateX(0px)}
+            to {transform: translateX(200px)}
+        }
+
+        @keyframes color {
+            0% {background: mediumpurple}
+            50% {background: yellow}
+            100% {background: greenyellow}
+        }
+    </style>
+</head>
+<body>
+<header></header>
+<h1>Scale</h1>
+<div class="scale"></div>
+<br>
+<h1>Rotate</h1>
+<div class="rotatediv"> </div>
+<br>
+<h1>Meerdere animaties</h1>
+<div class="multi"></div>
+</body>
+</html>

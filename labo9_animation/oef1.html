@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            width: 600px;
+            margin: auto;
+            background-color: #191919;
+            font-family: Arial;
+            text-transform: uppercase;
+        }
+
+        .title-holder {
+            display: flex;
+        }
+
+        h1 {
+            color: #0cb5cb;
+        }
+
+        .hole {
+            background-color: #a9a8a8;
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            margin-right: 50px;
+            overflow: hidden;
+        }
+
+        img {
+            width: 60px;
+            animation-name: cup;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes  cup{
+            from {
+                transform: translateX(80px);
+            }
+            to {
+                transform: translateX(-60px);
+            }
+        }
+
+        .links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            border-bottom: 1px solid gray;
+        }
+
+        .links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #l1:hover + #aff {
+            background-color: red;
+        }
+
+        .vs {
+            text-align: center;
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            margin: auto;
+            margin-top: 20px;
+            background-color: #a9a8a8;
+            overflow: auto;
+            animation-name: vs-animation;
+            animation-duration: 3s;
+            animation-play-state: paused;
+        }
+
+        .vs h1 {
+            color: gray;
+            margin-top: 20px;
+        }
+
+        @keyframes vs-animation {
+            from {
+                transform: translateY(-230px);
+            }
+            to {
+                transform: translateY(0px);
+            }
+        }
+
+        #hov:hover {
+            color: red;
+        }
+
+        #hov:hover + #aff{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="title-holder">
+        <div class="hole">
+            <img src="cup-purple.png" alt="cup">
+        </div>
+        <h1>The best esprosso dink?</h1>
+    </div>
+    <div class="links">
+        <a id="l1" href="#">Macchiato</a>
+        <a href="#">Latte</a>
+        <a href="#">Breve</a>
+        <a href="#">Mocha</a>
+        <a href="#">Cappuccino</a>
+        <a href="#">Americano</a>
+    </div>
+    <div id="vs" class="vs">
+        <h1>VS</h1>
+    </div>
+    <h1 id="hov">hover</h1>
+    <h1 id="aff">Affect</h1>
+</header>
+</body>
+</html>

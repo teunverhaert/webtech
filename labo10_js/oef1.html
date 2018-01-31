@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scouts</title>
+</head>
+<body>
+<div>
+    <label for="soep">Soep aantal: </label>
+    <input type="text" id="soep">
+    <br>
+    <label for="hoofdgerecht">Hoofdgerecht</label>
+    <input type="text" id="hoofdgerecht">
+    <br>
+    <button onclick="onSubmit()" type="button">hup</button>
+</div>
+<br>
+<table>
+    <tr>
+        <th></th>
+        <th>Prijs</th>
+        <th>Aantal</th>
+        <th>Totaal</th>
+    </tr>
+    <tr>
+        <td>soep</td>
+        <td id="soep_prijs">0.00</td>
+        <td id="soep_aantal">0</td>
+        <td id="soep_totaal">0.00</td>
+    </tr>
+    <tr>
+        <td>hoofdgerecht</td>
+        <td id="hoofdgerecht_prijs">0.00</td>
+        <td id="hoofdgerecht_aantal">0</td>
+        <td id="hoofdgerecht_totaal">0.00</td>
+    </tr>
+    <tr>
+        <td>totaal:</td>
+        <td></td>
+        <td></td>
+        <td id="totaal">0.00</td>
+    </tr>
+</table>
+<script>
+    var soepPrijsTag = document.getElementById("soep_prijs");
+    console.log(soepPrijsTag.innerHTML);
+    var soepAantalTag = document.getElementById('soep_aantal');
+     var soepTotaalTag = document.getElementById('soep_totaal');
+     var hoofdPrijsTag = document.getElementById('hoofdgerecht_prijs');
+    var hoofdAantalTag = document.getElementById('hoofdgerecht_aantal');
+    var hoofdTotaalTag = document.getElementById('hoofdgerecht_totaal');
+     var totaalTag = document.getElementById('totaal');
+     var inputform = document.getElementById('inputform')
+
+     var soepPrijs = 1.25;
+     var soepAantal = 0;
+     var hoofdPrijs = 8.25;
+     var hoofdAantal = 0;
+
+     soepPrijsTag.innerHTML = soepPrijs;
+     hoofdPrijsTag.innerHTML = hoofdPrijs;
+
+    document.getElementById('soep').value = 0;
+    document.getElementById('hoofdgerecht').value = 0;
+
+     function onSubmit() {
+         soepAantal += parseInt(document.getElementById('soep').value);
+         hoofdAantal += parseInt(document.getElementById('hoofdgerecht').value);
+         console.log(hoofdAantal);
+         setOutputs();
+     }
+
+     function setOutputs() {
+         soepAantalTag.innerHTML = soepAantal;
+         soepTotaalTag.innerHTML = soepAantal * soepPrijs;
+         hoofdAantalTag.innerHTML = hoofdAantal;
+         hoofdTotaalTag.innerHTML = hoofdAantal * hoofdPrijs;
+         totaalTag.innerHTML = soepAantal * soepPrijs + hoofdAantal * hoofdPrijs;
+     }
+</script>
+</body>
+</html>

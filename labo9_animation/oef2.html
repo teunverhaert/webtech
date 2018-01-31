@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Klok</title>
+    <style>
+        .clock {
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            background-image: url("klok.png");
+            background-size: contain;
+            position: relative;
+        }
+
+        .second {
+            position: absolute;
+            height: 160px;
+            width: 4px;
+            background: black;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            top: 40px;
+            transform-origin: 2px 158px;
+            animation-name: rotate;
+            animation-duration: 30s;
+            animation-timing-function: linear;
+        }
+
+        @keyframes rotate {
+            100%{
+
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="clock">
+    <div class="second"></div>
+    <div class="minute"></div>
+    <div class="hour"></div>
+</div>
+</body>
+</html>

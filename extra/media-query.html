@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+    <title>Media</title>
+    <style>
+        body {
+            background: lightblue;
+        }
+
+        .links {
+            background: gray;
+            display: inline-block;
+        }
+
+        .content {
+            background: yellow;
+            width: 50%;
+            display: inline-block;
+        }
+
+        .footer {
+            background: blue;
+            display: inline-block;
+        }
+
+        @media (max-width: 800px) {
+            body {
+                background: pink;
+            }
+
+            .links {
+                display: block;
+            }
+
+            .content {
+                width: 100%;
+                display: block;
+            }
+
+            .footer {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="links">
+    <a href="#">Link 1</a><br>
+    <a href="#">Link 2</a><br>
+    <a href="#">Link 3</a><br>
+    <a href="#">Link 4</a><br>
+</div>
+
+<div class="content">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Assumenda exercitationem facere in molestias nostrum quo soluta velit.
+        Accusantium, commodi facilis ipsa maxime nisi rerum?
+        Corporis minima nam nemo porro veritatis.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Assumenda exercitationem facere in molestias nostrum quo soluta velit.
+        Accusantium, commodi facilis ipsa maxime nisi rerum?
+        Corporis minima nam nemo porro veritatis.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Assumenda exercitationem facere in molestias nostrum quo soluta velit.
+        Accusantium, commodi facilis ipsa maxime nisi rerum?
+        Corporis minima nam nemo porro veritatis.
+    </p>
+</div>
+
+<div class="footer">
+    <p>Footer</p>
+</div>
+</body>
+</html>

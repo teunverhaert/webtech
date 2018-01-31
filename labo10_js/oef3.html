@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Row</title>
+    <style>
+        .row {
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .row:nth-child(odd) {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<div id="output">
+
+</div>
+<script>
+    var amount = parseInt(prompt())
+    if (amount>=1 && amount<=10) {
+        var output = document.getElementById('output');
+        var outString = '';
+        for (var i=0; i<amount; i++) {
+            outString += "<div class='row'>";
+            for (var j=0; j<5; j++) {
+                outString += "<span>" + ((i*5)+(j+1)) + "</span>";
+            }
+            outString += "</div>";
+        }
+        output.innerHTML = outString;
+    } else {
+        window.alert("error");
+    }
+</script>
+</body>
+</html>

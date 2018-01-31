@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: #0cb5cb;
+        }
+
+        .cloud1, .cloud2, .ball {
+            position: fixed;
+        }
+
+        .cloud1 {
+            top: 100px;
+            width: 200px;
+            animation-name: leftToRight;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        .cloud2 {
+            top: 400px;
+            width: 300px;
+            animation-name: rightToLeft;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes leftToRight {
+            from {
+                transform: translateX(-200px);
+            }
+            to {
+                transform: translateX(1200px);
+            }
+        }
+
+        @keyframes rightToLeft {
+            from {
+                transform: translateX(1200px);
+            }
+            to {
+                transform: translateX(-300px);
+            }
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            top: 600px;
+            left: 100px;
+            animation-name: ballMove;
+            animation-duration: 2s;
+            animation-fill-mode: both;
+            animation-timing-function: steps(10);
+        }
+
+        @keyframes ballMove {
+            from {
+                left: 100px;
+            }
+            to {
+                left: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+<img src="http://www.freepngimg.com/download/cloud/10-cloud-png-image.png" alt="" class="cloud1">
+<img src="http://www.freepngimg.com/download/cloud/9-2-cloud-png-8.png" alt="" class="cloud2">
+<div class="ball"></div>
+</body>
+</html>

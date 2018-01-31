@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: lightgrey;
+        }
+        .kubus {
+            width: 600px;
+            height: 600px;
+            background-color: yellow;
+            margin: 50px auto 10px auto;
+        }
+        p {
+            margin: auto;
+            text-align: center;
+            font-family: helvetica;
+            color: #888;
+            font-size: 0.8em;
+        }
+        h2 {
+            font-family: helvetica;
+            font-size: 2em;
+            margin: 150px auto;
+            width: 90px;
+            text-align: center;
+            display: none;
+        }
+
+        /* 800 px, 620px, 520px, 420px en 320px */
+
+        @media (min-width: 1200px){
+            .kubus {
+                display: none;
+            }
+            h2 {
+                display: block;
+            }
+        }
+
+        @media (max-width: 800px){
+            .kubus {
+                background-color: deepskyblue;
+            }
+        }
+
+        @media (max-width: 620px){
+            .kubus {
+                background-color: red;
+                width: 500px;
+                height: 500px;
+            }
+        }
+
+        @media (max-width: 520px){
+            .kubus {
+                background-color: green;
+                width: 400px;
+                height: 400px;
+            }
+            p {
+                font-size: 0.7em;
+            }
+        }
+
+        @media (max-width: 420px){
+            .kubus {
+                background-color: orange;
+                width: 300px;
+                height: 300px;
+            }
+            p {
+                font-size: 0.6em;
+            }
+        }
+
+        @media (max-width: 320px){
+            .kubus {
+                background-color: purple;
+                width: 200px;
+                height: 200px;
+            }
+            p {
+                font-size: 0.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="kubus"></div>
+<h2>Game Over :-)</h2>
+<p>
+    * Ik ben responsive. Ontdek het door het scherm kleiner en groter te maken
+</p>
+</body>
+</html>
